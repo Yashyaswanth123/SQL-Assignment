@@ -1,0 +1,50 @@
+1.create table student name student_id(1-10), department?
+create table Student (name varchar(20),sid integer primary key,department varchar(20));
+
+2.insert 10 rows?
+insert into Student values('Yaswanth',101,'Civil');
+insert into Student values('Yash',102,'Mech');
+insert into Student values('Gopi',103,'ECE');
+insert into Student values('Kumar',104,'EEE');
+insert into Student values('Prathibha',105,'Civil');
+insert into Student values('Naveen',106,'CSE');
+insert into Student values('Bhavani',107,'Civil');
+insert into Student values('Saida',108,'ECE');
+insert into Student values('Rasool',109,'ECE');
+insert into Student values('Lokesh',110,'ECE');
+
+3.alter the table to add column city?
+Alter table Student add column city varchar(20);
+
+4.update the table with id>5 Qto Bangalore and less than 5 to your choice?
+update Student set city='Guntur' where sid<1007;
+update Student set city='Banglore' where sid>1006;
+
+5.alter table add column course as not null with default value as 'Python'?
+Alter table Student add column course varchar(20) not null default 'CSS';
+
+6.alter table add column mystate as integer?
+Alter table Student add column mystate Integer;
+
+7.alter table modify column mystate to varchar(20)?
+Alter table Student modify mystate varchar(20);
+
+8.alter table rename the column name mystate to state?
+Alter table Student rename column mystate to state;
+
+9. alter table add column zipcode?
+Alter table Student add column zipcode varchar(20);
+
+10. update the course of students with id<3 to angular id>3 to id<8 to spring?
+update Student set course='HTML' where Gopi>1003 and Kumar <1008;
+
+11. print the list of students order by name?
+select * from student order by name;
+
+12. drop the column zipcode?
+alter table Student drop column zipcode;
+
+13.get the unique course name from student - prints CSS, HTML,python?
+select distinct course from student;
+
+13. print the student with alias name as Stud_Name,Stud_Id,Stud_city,Stud_department,Stud_course,Stud_State? select name as Stud_name,sid as Stud_id,city as Stud_city,department as Stud_department,course as stud_course,state as Stud_state from student;
